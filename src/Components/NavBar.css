@@ -1,0 +1,13 @@
+.MuiSlider-root {
+    color: #ffffff !important;
+    width: 10% !important;
+}
+.MuiTypography-root {
+  margin: 40px 30px 40px 40px!important;
+}
+.btn{
+  cursor: pointer;
+}
+.PrivateValueLabel-label-5{
+  color: black !important;
+}
