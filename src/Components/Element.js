@@ -7,14 +7,21 @@ export default function Element({data}) {
     <Container>
       {data.map((size)=>(
         <>
-        <Bar key={size} height={`${4*size}px`} width={`${width}px`}/>
+        <Bar key={size} height={`${4*size}px`} width={`${width}px`}>
+          {data.length<50 && <Text>{size}</Text>}
+          </Bar>
         </>
       ))}
     </Container>
   );
 }
-
+const Text=styled.div`
+color:white;
+font-size:1rem;
+font-weight: bold;
+`;
 const Container=styled.div`
+  position:absolute;
   display: flex;
   flex-direction:row;
   width:100%;
@@ -25,6 +32,9 @@ const Container=styled.div`
 `;
 
 const Bar=styled.div`
+display: flex;
+align-items:center;
+justify-content:center;
 width:${(props)=>props.width};
 height:${(props)=>props.height};
 background-color:${(props)=>props.color || "#000"};
