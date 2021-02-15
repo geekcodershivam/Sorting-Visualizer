@@ -6,7 +6,6 @@ import Slider from '@material-ui/core/Slider';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import Fade from '@material-ui/core/Fade';
-import Test from './Test'
 import './NavBar.css'
 export default function HideAppBar(props) {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -57,7 +56,7 @@ export default function HideAppBar(props) {
 
         
       </Menu>
-      <Typography className="btn" variant="h6" onClick={()=> props.StartSorting()}>Starts</Typography>
+      <Typography className="btn" variant="h6" onClick={()=> props.StartSorting(algo)}>Starts</Typography>
       <Typography className="btn" variant="h6" onClick={()=> props.RestartAll()}>Restart</Typography>
           </Toolbar>
         </AppBar>
